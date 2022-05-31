@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ApplicationService">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="300.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="300.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="300.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="300.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="208.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="287.0" minHeight="0.0" prefHeight="105.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="213.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" />
+      <RowConstraints maxHeight="10.0" minHeight="40.0" prefHeight="40.0" />
+      <RowConstraints maxHeight="10.0" minHeight="40.0" prefHeight="40.0" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="table" onMouseClicked="#handelMouseAvtion" prefHeight="221.0" prefWidth="588.0" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="colmatricule" prefWidth="84.0" text="Matricule" />
+          <TableColumn fx:id="colnom" text="Nom" />
+            <TableColumn fx:id="colemail" prefWidth="82.0" text="Email" />
+            <TableColumn fx:id="colrecrutement" prefWidth="119.0" text="Recrutement" />
+            <TableColumn fx:id="colsalaire" prefWidth="85.0" text="Salaire" />
+            <TableColumn fx:id="colhsupp" prefWidth="78.0" />
+            <TableColumn fx:id="colphsupp" prefWidth="71.0" />
+        </columns>
+      </TableView>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Affichage des Salaries" textAlignment="CENTER" wrappingWidth="456.74365234375" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfmatricule" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="1" />
+      <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteSalarie" text="Supprimer" translateX="20.0" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+      <TextField fx:id="tfnom" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="tfemail" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="tfrecrutement" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" />
+      <TextField fx:id="tfsalaire" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <TextField fx:id="tfhsupp" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="tfphsupp" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateSalarie" text="Modifier" translateX="-40.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+      <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#createSalarie" text="Ajouter" translateX="100.0" GridPane.rowIndex="12" />
+      <TextField fx:id="tfentreprise" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <TextField fx:id="tfvente" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="tfpourcentage" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <RadioButton fx:id="rbemployee" mnemonicParsing="false" onAction="#setHSupp" prefHeight="21.0" prefWidth="132.0" text="Employee" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Gill Sans Nova" size="20.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="rbvendeur" mnemonicParsing="false" onAction="#setPourcentage" prefHeight="27.0" prefWidth="133.0" text="Vendeur" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <font>
+            <Font name="Gill Sans Nova" size="20.0" />
+         </font></RadioButton>
+      <Button fx:id="btnMaxTauxVente" mnemonicParsing="false" onAction="#getMaxVente" text="Max Taux Vente" translateX="70.0" GridPane.rowIndex="13" />
+      <TextField fx:id="tfmin" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <TextField fx:id="tfmax" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="256.0" translateY="-20.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Button fx:id="btnSalaireCompris" mnemonicParsing="false" onAction="#SalaireCompris" text="Salaire Compris" translateX="155.0" translateY="25.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <Button fx:id="btnAnciennete" mnemonicParsing="false" onAction="#Anciennete" text="Ancienneté" translateX="-50.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+      <Button fx:id="btnSalaireFaible" mnemonicParsing="false" onAction="#SalaireFaible" text="Salaire Faible" translateX="10.0" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+      <Button fx:id="btnListeEmployee" mnemonicParsing="false" onAction="#switchToVueScene" text="Affichage des Employees" translateX="35.0" GridPane.rowIndex="11" />
+      <Button fx:id="btnListeEmployee1" mnemonicParsing="false" onAction="#switchToVueScene1" text="Affichage des Vendeurs" translateX="-30.0" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+      <Label prefHeight="31.0" prefWidth="294.0" text="           Email:" textAlignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="        Matricule:" textAlignment="CENTER">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="  Année Recrutement:" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font name="Gill Sans Nova" size="24.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="           Nom:" textAlignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="        Entreprise:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="           Salaire:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="33.0" prefWidth="449.0" text="     Choisir la catégorie de salarie:" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Gill Sans Nova" size="26.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="           HSupp:" textAlignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="          PHSupp:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="           Vente:" textAlignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="      Pourcentage:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="       Salaire Min:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="294.0" text="       Salaire Max:" textAlignment="CENTER" translateY="-20.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <font>
+            <Font name="Gill Sans Nova" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
